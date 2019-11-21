@@ -3,7 +3,7 @@
 
 ![the galapagos islands](./island.svg)
 
-## Server Setup
+## Server
 
 ### Requirements
 
@@ -16,4 +16,19 @@
 cd server
 poetry install
 python app.py
+````
+
+## Client
+
+### Requirements
+
+  - nodejs
+  - yarn
+
+### Install and Run
+
+````
+cd client
+yarn install
+yarn serve
 ````
