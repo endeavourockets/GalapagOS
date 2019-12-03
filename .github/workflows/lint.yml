@@ -1,6 +1,8 @@
 name: Lint
 
-on: [push]
+on:
+  schedule:
+    - cron: "0 2 * * *"
 
 jobs:
   build:
