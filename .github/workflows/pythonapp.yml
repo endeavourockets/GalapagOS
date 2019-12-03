@@ -20,6 +20,16 @@ jobs:
         poetry install --no-dev
         poetry run pip freeze > requirements.txt
         python -V | tr '[:upper:] ' '[:lower:]-' > runtime.txt
+    - name: autopep8
+      run: |
+        poetry install
+        poetry run autopep8 --in-place --recursive .
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Heroku Files and autopep8" -a
     - name: Prepare for Heroku
       uses: ad-m/github-push-action@v0.5.0
       with:
