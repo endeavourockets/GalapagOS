@@ -29,7 +29,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
-        git commit -m "Heroku Files and autopep8" -a
+        git diff-index --quiet HEAD || git commit -m "Heroku Files and autopep8" -a
     - name: Prepare for Heroku
       uses: ad-m/github-push-action@v0.5.0
       with:
