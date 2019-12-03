@@ -11,6 +11,7 @@ overview = html.Div([
     html.Div(id='display-value')
 ])
 
+
 @app.callback(
     dash.dependencies.Output('display-value', 'children'),
     [dash.dependencies.Input('dropdown', 'value')]
