@@ -16,6 +16,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "19.3.0"
 
 [[package]]
+category = "dev"
+description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
+name = "autopep8"
+optional = false
+python-versions = "*"
+version = "1.4.4"
+
+[package.dependencies]
+pycodestyle = ">=2.4.0"
+
+[[package]]
 category = "main"
 description = "Composable command line interface toolkit"
 name = "click"
@@ -57,6 +68,14 @@ name = "dash-core-components"
 optional = false
 python-versions = "*"
 version = "1.6.0"
+
+[[package]]
+category = "main"
+description = "A dash component for specifying raw HTML"
+name = "dash-dangerously-set-inner-html"
+optional = false
+python-versions = "*"
+version = "0.0.2"
 
 [[package]]
 category = "main"
@@ -342,16 +361,18 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "5d9779a18f01c4c4fd5ea4bf23cfcfb08f5ce99ad51640fd399a5c4fbdf0b2c7"
+content-hash = "a706c15c002f4dc6a99b3c34e00232bc583e0e0165dda6843bcb561dd46db90d"
 python-versions = "^3.7"
 
 [metadata.hashes]
 atomicwrites = ["03472c30eb2c5d1ba9227e4c2ca66ab8287fbfbbda3888aa93dc2e28fc6811b4", "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6"]
 attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"]
+autopep8 = ["4d8eec30cc81bc5617dbf1218201d770dc35629363547f17577c61683ccfb3ee"]
 click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 dash = ["3d111272dcc3b1ae5471656f66b761263aeba53e595abb617702295849d16702"]
 dash-core-components = ["d3434a070ac3005d61652f2069a50bae47cfe28f49b226e8bb66d7f3f256562b"]
+dash-dangerously-set-inner-html = ["d7fe990755851fc4d2e22c8f10b7aea055cabf380bbceefba589779b269fea64"]
 dash-html-components = ["8992097a044f5add21f86ccbe0caef8c499394a04d5f2b6cc4458a42f37cca98"]
 dash-renderer = ["cb784db3511f114d69dbf17b9128e99525d0ca8c864cc0ab9806776f919b5209"]
 dash-table = ["f88623e478e2701a10aeee92a4b8adcc148ffb4943efab57143611c05a77f990"]
