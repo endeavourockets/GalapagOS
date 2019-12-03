@@ -12,25 +12,18 @@
   - python ^3.7
   - poetry ^0.12.13
 
-### Install and Run
+### Commands
 
 ````
-cd server
+# install
 poetry install
-python app.py
-````
 
-## Client
+# lint
+poetry run flake8
 
-### Requirements
+# test
+poetry run pytest
 
-  - nodejs
-  - yarn
-
-### Install and Run
-
-````
-cd client
-yarn install
-yarn serve
+# serve
+poetry run gunicorn src.app:server
 ````
