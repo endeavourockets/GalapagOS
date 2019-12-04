@@ -1,5 +1,4 @@
-name: Python Application
-
+name: Build
 on: [push]
 
 jobs:
