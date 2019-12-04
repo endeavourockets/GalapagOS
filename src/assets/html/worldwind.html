@@ -1,6 +1,4 @@
-<script src="https://files.worldwind.arc.nasa.gov/artifactory/web/WebWorldWind-StandaloneData.tar.gz/worldwind.min.js"
-        type="text/javascript">
-</script>
+<img class="loading" src="./assets/images/loading/loading.gif" alt="Loading 3D Map">
 <canvas id="mapCanvas">
         Your browser does not support HTML5 Canvas.
 </canvas>
@@ -12,5 +10,15 @@
         margin-top:-1.5rem;
         position: absolute;
         left: 0;
+    }
+    img.loading {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        mix-blend-mode: darken;
+    }
+    img.loading.removed {
+        display: none;
     }
 </style>
