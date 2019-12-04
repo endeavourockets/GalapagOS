@@ -1,7 +1,7 @@
 from app import app, dash
 from pages.empty import empty
 # pages
-from pages.overview import display_value, overview
+from pages.overview import overview
 from pages.map import map
 
 server = app.server

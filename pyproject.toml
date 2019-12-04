@@ -10,6 +10,7 @@ dash = "^1.7"
 plotly = "^4.3"
 gunicorn = "^20.0"
 dash-dangerously-set-inner-html = "^0.0.2"
+dash_defer_js_import = "^0.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3"

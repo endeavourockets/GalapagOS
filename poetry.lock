@@ -79,6 +79,14 @@ version = "0.0.2"
 
 [[package]]
 category = "main"
+description = "Deferring loading of JS files until after React loads"
+name = "dash-defer-js-import"
+optional = false
+python-versions = "*"
+version = "0.0.2"
+
+[[package]]
+category = "main"
 description = "Vanilla HTML components for Dash"
 name = "dash-html-components"
 optional = false
@@ -361,7 +369,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "a706c15c002f4dc6a99b3c34e00232bc583e0e0165dda6843bcb561dd46db90d"
+content-hash = "2442c8732f9d595bb96c91db73db25a03873ea6c8a55e9e17cbd1f1db61abd81"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -373,6 +381,7 @@ colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", 
 dash = ["3d111272dcc3b1ae5471656f66b761263aeba53e595abb617702295849d16702"]
 dash-core-components = ["d3434a070ac3005d61652f2069a50bae47cfe28f49b226e8bb66d7f3f256562b"]
 dash-dangerously-set-inner-html = ["d7fe990755851fc4d2e22c8f10b7aea055cabf380bbceefba589779b269fea64"]
+dash-defer-js-import = ["403fef93d46535ed3ad4d5df0749136cfd1439d6956ff877b40dc47021df1e4a"]
 dash-html-components = ["8992097a044f5add21f86ccbe0caef8c499394a04d5f2b6cc4458a42f37cca98"]
 dash-renderer = ["cb784db3511f114d69dbf17b9128e99525d0ca8c864cc0ab9806776f919b5209"]
 dash-table = ["f88623e478e2701a10aeee92a4b8adcc148ffb4943efab57143611c05a77f990"]
