@@ -26,6 +26,12 @@ poetry run flake8
 # test
 poetry run pytest
 
-# serve
-poetry run gunicorn src.app:server
+# run development server
+cd src && poetry run python main.py
+````
+
+### Production Server
+
+````
+cd src && poetry run gunicorn main:server
 ````
