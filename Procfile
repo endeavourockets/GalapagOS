@@ -1,1 +1,1 @@
-web: gunicorn src.main:server
+web: cd src && gunicorn main:server
