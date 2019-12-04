@@ -1,5 +1,7 @@
 # GalapagOS
-![https://github.com/endeavourockets/GalapagOS/actions?query=workflow%3A%22Python+Application%22](https://github.com/endeavourockets/GalapagOS/workflows/Python%20Application/badge.svg) ![https://github.com/endeavourockets/GalapagOS/actions?query=workflow%3A%22Lint%22](https://github.com/endeavourockets/GalapagOS/workflows/Lint/badge.svg)
+[![Build](https://github.com/endeavourockets/GalapagOS/workflows/Build/badge.svg)](https://github.com/endeavourockets/GalapagOS/actions?query=workflow%3A%22Build%22)
+[![Lint](https://github.com/endeavourockets/GalapagOS/workflows/Lint/badge.svg)](https://github.com/endeavourockets/GalapagOS/actions?query=workflow%3A%22Lint%22)
+[![Heroku](https://pyheroku-badge.herokuapp.com/?app=galapag-os)](https://galapag-os.herokuapp.com)
 
 **G**round-support **O**perations **S**ystem for Endeavour's Darwin Rocket.
 
