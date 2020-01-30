@@ -1,10 +1,10 @@
 from app import app, html, dcc, dash
 
-#sensor data for table
+# sensor data for table
 global sensors
 global values
-sensors = ["S1","S2","S3","S4","S5"]
-values = [1,2,3,4,5]
+sensors = ["S1", "S2", "S3", "S4", "S5"]
+values = [1, 2, 3, 4, 5]
 
 overview = html.Div([
     html.H2('Hello World'),
@@ -15,15 +15,16 @@ overview = html.Div([
         value='LA'
     ),
     html.Div(id='display-value'),
-	
-	html.Table(
-                
-		#Sensor names
-		[html.Tr([html.Th("Sensor",), html.Th("Value")])] +
-		
-		#Sensor Values
-		[html.Tr([html.Td(sensors[i]), html.Td(values[i])]) for i in range(max(len(sensors),len(values)))]
-		)
+
+    html.Table(
+
+        # Sensor names
+        [html.Tr([html.Th("Sensor",), html.Th("Value")])] +
+
+        # Sensor Values
+        [html.Tr([html.Td(sensors[i]), html.Td(values[i])])
+         for i in range(max(len(sensors), len(values)))]
+    )
 ])
 
 
@@ -33,4 +34,3 @@ overview = html.Div([
 )
 def display_value(value):
     return 'You have selected "{}"'.format(value)
-	
