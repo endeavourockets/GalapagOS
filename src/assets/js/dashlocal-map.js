@@ -66,7 +66,7 @@ function create_path(path_points){
 
     // Create and assign the path's attributes.
     var pathAttributes = new WorldWind.ShapeAttributes(null);
-    pathAttributes.outlineColor = new WorldWind.Color(0, 0, 0, 1);
+    pathAttributes.outlineColor = new WorldWind.Color(1, 0, 0, 1);
     pathAttributes.outlineWidth = 4;
     pathAttributes.drawInterior = true;
     pathAttributes.interiorColor = new WorldWind.Color(0.886, 0.204, 0.922, 1);
