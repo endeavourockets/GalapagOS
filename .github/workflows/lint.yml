@@ -19,6 +19,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Install
-      run: pip install flake8 --user
+      run: python -m pip install flake8
     - name: Lint with flake8
       run: flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
