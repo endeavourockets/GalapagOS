@@ -5,12 +5,14 @@ description = "A dash/plotly server for Endeavour's Darwin Rocket."
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 dash = "^1.7"
 plotly = "^4.3"
 gunicorn = "^20.0"
 dash-dangerously-set-inner-html = "^0.0.2"
 dash_defer_js_import = "^0.0.2"
+flask = "^1.1.1"
+flask_sqlalchemy = "^2.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3"
