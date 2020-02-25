@@ -9,8 +9,10 @@ simulation = html.Div([
         html.Div([
             html.H3('Simulation', className='card-title'),
             html.Div([
-                html.Button('Start', id='start-button', className='btn btn-primary btn-sm'),
-                html.Button('Cancel', id='cancel-button', className='btn btn-danger btn-sm')
+                html.Button('Start', id='start-button',
+                            className='btn btn-primary btn-sm'),
+                html.Button('Cancel', id='cancel-button',
+                            className='btn btn-danger btn-sm')
             ], className='card-options')
         ], className='card-header'),
         html.Div([
@@ -30,6 +32,7 @@ simulation = html.Div([
 
 canceled = False
 
+
 @app.callback(
     dash.dependencies.Output('simulation-output', 'children'),
     [dash.dependencies.Input('start-button', 'n_clicks')],
@@ -40,12 +43,15 @@ def start_simulation(n_clicks, value):
         canceled = False
         while not canceled:
             test_array = [
-                {'Sensor': 'Temperature', 'Temperature': np.random.normal(15,15)},
-                {'Sensor': 'GPS', 'Altitude': np.random.normal(1000,200), 'Longitude': np.random.normal(23,50), 'Latitude': np.random.normal(57,50)}
+                {'Sensor': 'Temperature',
+                    'Temperature': np.random.normal(15, 15)},
+                {'Sensor': 'GPS', 'Altitude': np.random.normal(1000, 200), 'Longitude': np.random.normal(
+                    23, 50), 'Latitude': np.random.normal(57, 50)}
             ]
             add_sensor_reading(test_array)
             time.sleep(5)
     return "simulation finished"
+
 
 @app.callback(
     dash.dependencies.Output('cancel-output', 'children'),

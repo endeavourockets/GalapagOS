@@ -26,6 +26,7 @@ def getSensorTable():
         style_cell={'textAlign': 'center', 'min-width': '50px'},
     )
 
+
 def getValueTable():
     data_query = Data.query
     df = pd.read_sql(data_query.statement, data_query.session.bind)
