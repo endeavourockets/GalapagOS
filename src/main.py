@@ -16,11 +16,12 @@ def display_page(pathname):
         return map
     # You could also return a 404 "URL not found" page here
 
+
 if __name__ == '__main__':
     db.create_all()
     test_array = [
-        {'Sensor' : 'Temperature' , 'Temperature' : 30.7},
-        {'Sensor' : 'GPS' , 'Altitude' : 57, 'Longitude' : 23, 'Latitude': 23}
+        {'Sensor': 'Temperature', 'Temperature': 30.7},
+        {'Sensor': 'GPS', 'Altitude': 57, 'Longitude': 23, 'Latitude': 23}
     ]
     add_sensor_reading(test_array)
     app.run_server(debug=True)
