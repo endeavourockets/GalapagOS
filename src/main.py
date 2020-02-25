@@ -3,6 +3,7 @@ from pages.empty import empty
 # pages
 from pages.overview import overview
 from pages.map import map
+from pages.simulation import simulation
 
 server = app.server
 app.layout = empty
@@ -14,11 +15,17 @@ def display_page(pathname):
         return overview
     if pathname == '/map':
         return map
+    if pathname == '/simulation':
+        return simulation
     # You could also return a 404 "URL not found" page here
 
 
 if __name__ == '__main__':
-    db.create_all()
+    try:
+        db.drop_all()
+        db.create_all()
+    except:
+        pass
     test_array = [
         {'Sensor': 'Temperature', 'Temperature': 30.7},
         {'Sensor': 'GPS', 'Altitude': 57, 'Longitude': 23, 'Latitude': 23}
