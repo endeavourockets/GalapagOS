@@ -4,6 +4,7 @@ from pages.empty import empty
 from pages.overview import overview
 from pages.map import map
 from pages.simulation import simulation
+from pages.sensors import sensors
 
 server = app.server
 app.layout = empty
@@ -17,6 +18,8 @@ def display_page(pathname):
         return map
     if pathname == '/simulation':
         return simulation
+    if pathname == '/sensors':
+        return sensors
     # You could also return a 404 "URL not found" page here
 
 
@@ -26,9 +29,4 @@ if __name__ == '__main__':
         db.create_all()
     except:
         pass
-    test_array = [
-        {'Sensor': 'Temperature', 'Temperature': 30.7},
-        {'Sensor': 'GPS', 'Altitude': 57, 'Longitude': 23, 'Latitude': 23}
-    ]
-    add_sensor_reading(test_array)
     app.run_server(debug=True)

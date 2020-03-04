@@ -1,0 +1,37 @@
+  timeout: 1
+  sensors:
+    - Temperature:
+        - Temperature:
+            type: 'normal'
+            loc: 15
+            scale: 15
+    - GPS:
+        - Altitude:
+            type: 'normal'
+            loc: 1000
+            scale: 200
+            update loc: True
+        - Longitude:
+            type: 'normal'
+            loc: -3.21
+            scale: 10
+        - Latitude:
+            type: 'normal'
+            loc: 55.96
+            scale: 10
+    - Orientation:
+        - X:
+            type: 'normal'
+            loc: 0
+            scale: 0.1
+            update loc: True
+        - Y:
+            type: 'normal'
+            loc: 0
+            scale: 0.1
+            update loc: True
+        - Z:
+            type: 'normal'
+            loc: 1
+            scale: 0.1
+            update loc: True
