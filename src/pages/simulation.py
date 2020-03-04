@@ -34,7 +34,6 @@ simulation = html.Div([
 ])
 
 
-
 @app.callback(
     dash.dependencies.Output('simulation-output', 'children'),
     [dash.dependencies.Input('start-button', 'n_clicks')],

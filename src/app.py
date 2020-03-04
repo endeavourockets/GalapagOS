@@ -34,6 +34,7 @@ class Data(db.Model):
     data_v = db.Column(db.String(32), nullable=False)
     Sensor_id = db.Column(db.Integer, db.ForeignKey(Sensor.id), nullable=False)
 
+
 class Simulation(db.Model):
     title = db.Column(db.String(32), primary_key=True)
     running = db.Column(db.Boolean, nullable=False)
@@ -43,6 +44,7 @@ def load_html(name):
     with open(f'./assets/html/{name}.html', 'r') as file:
         return file.read().replace('\n', '')
 
+
 def set_simulation_status(value, running=True):
     sim = get_simulation_status(value)
     if sim is not None:
@@ -50,8 +52,10 @@ def set_simulation_status(value, running=True):
     db.session.add(Simulation(title=value, running=running))
     db.session.commit()
 
+
 def get_simulation_status(value):
     return Simulation.query.get(value)
+
 
 def add_sensor_reading(entry):
     all_Sensors = Sensor.query.order_by(Sensor.id)
