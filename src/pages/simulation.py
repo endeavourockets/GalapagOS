@@ -40,7 +40,7 @@ simulation = html.Div([
     [dash.dependencies.State('sim-dropdown', 'value')])
 def start_simulation(n_clicks, value):
     if n_clicks != None:
-        sim_data = yaml.load(open(f'simulations/{value}.yaml','r'))
+        sim_data = yaml.load(open(f'simulations/{value}.yaml', 'r'))
         set_simulation_status(value, True)
         last_val = {}
         while get_simulation_status(value).running:
