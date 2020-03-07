@@ -1,4 +1,5 @@
-from app import app, html, dcc, dash, Data, Sensor
+from app import app, html, dcc, dash
+from db import Data, Sensor
 import dash_table
 import pandas as pd
 

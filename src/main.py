@@ -1,4 +1,5 @@
-from app import app, dash, db, Sensor, Data, add_sensor_reading
+from app import app, dash
+from db import db, Sensor, Data, add_sensor_reading
 from pages.empty import empty
 # pages
 from pages.overview import overview

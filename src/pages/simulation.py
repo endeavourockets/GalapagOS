@@ -1,4 +1,5 @@
-from app import app, html, dcc, dash, Data, Sensor, add_sensor_reading, set_simulation_status, get_simulation_status
+from app import app, html, dcc, dash
+from db import Data, Sensor, add_sensor_reading, set_simulation_status, get_simulation_status
 import dash_table
 import pandas as pd
 import numpy as np
