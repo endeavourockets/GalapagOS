@@ -19,9 +19,11 @@ app.server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.title = 'GalapagOS'
 
+
 def load_html(name):
     with open(f'./assets/html/{name}.html', 'r') as file:
         return file.read().replace('\n', '')
+
 
 template = load_html('dashboard')
 

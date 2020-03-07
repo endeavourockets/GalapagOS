@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy(app.server)
 
+
 class Sensor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(32), nullable=False)
@@ -19,6 +20,7 @@ class Data(db.Model):
 class Simulation(db.Model):
     title = db.Column(db.String(32), primary_key=True)
     running = db.Column(db.Boolean, nullable=False)
+
 
 def set_simulation_status(value, running=True):
     sim = get_simulation_status(value)

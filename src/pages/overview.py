@@ -30,15 +30,14 @@ overview = html.Div([
                 dcc.Graph(
                     id='altitude-graph',
                     figure=go.Figure(data=[go.Scatter(x=[0], y=[0])])
-                    )
-                ],
+                )
+            ],
             footer_id='altitude_text',
             col_sizes={'md': 12, 'xl': 8}
         ),
     ],
-    className='row')
+        className='row')
 ])
-
 
 
 @app.callback(dash.dependencies.Output('orientation', 'style'),
