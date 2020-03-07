@@ -1,6 +1,7 @@
 from pages.components.component import Component
 from app import html
 
+
 class Orientation(Component):
 
     def __init__(self):
@@ -20,12 +21,12 @@ class Orientation(Component):
     def create(self, **args):
         id = args['id']
         return html.Div([
-                    html.Img(src=self.circle_img,
-                                height=f'{self.height}', style=self.rocket_style),
-                    html.Img(src=self.rocket_img,
-                                height=f'{self.height}', style=self.circle_style, id=id),
-                    html.Div('', style={'height': f'{self.height}px'}),
-                ], className='card-body')
+            html.Img(src=self.circle_img,
+                     height=f'{self.height}', style=self.rocket_style),
+            html.Img(src=self.rocket_img,
+                     height=f'{self.height}', style=self.circle_style, id=id),
+            html.Div('', style={'height': f'{self.height}px'}),
+        ], className='card-body')
 
     def get_style(self, angle):
         new_style = self.rocket_style.copy()
