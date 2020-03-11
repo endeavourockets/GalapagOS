@@ -29,7 +29,7 @@ simulation = row.create(children=[
         ],
         card_options=[
             html.Button('Start', id='start-button',
-                            className='btn btn-primary btn-sm', style={'margin-right': '5px'}),
+                        className='btn btn-primary btn-sm', style={'margin-right': '5px'}),
             html.Div(),
             html.Button('Stop', id='cancel-button',
                         className='btn btn-danger btn-sm')
