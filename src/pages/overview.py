@@ -6,9 +6,11 @@ import pandas as pd
 from util import angle_between
 from pages.components.orientation import Orientation
 from pages.components.card import Card
+from pages.components.row import Row
 
 orientation = Orientation()
 card = Card()
+row = Row()
 
 overview = html.Div([
     html.H2('Overview'),
@@ -17,26 +19,25 @@ overview = html.Div([
         interval=1*1000,  # in milliseconds
         n_intervals=0
     ),
-    html.Div([
-        card.create(
-            title='Orientation',
-            children=[orientation.create(id='orientation')],
-            footer_id='orientation_text',
-            col_sizes={'md': 6, 'xl': 4}
-        ),
-        card.create(
-            title='Altitude',
-            children=[
-                dcc.Graph(
-                    id='altitude-graph',
-                    figure=go.Figure(data=[go.Scatter(x=[0], y=[0])])
-                )
-            ],
-            footer_id='altitude_text',
-            col_sizes={'md': 12, 'xl': 8}
-        ),
-    ],
-        className='row')
+    row.create(children=[
+            card.create(
+                title='Orientation',
+                children=[orientation.create(id='orientation')],
+                footer_id='orientation_text',
+                col_sizes={'md': 6, 'xl': 4}
+            ),
+            card.create(
+                title='Altitude',
+                children=[
+                    dcc.Graph(
+                        id='altitude-graph',
+                        figure=go.Figure(data=[go.Scatter(x=[0], y=[0])])
+                    )
+                ],
+                footer_id='altitude_text',
+                col_sizes={'md': 12, 'xl': 8}
+            ),
+        ])
 ])
 
 

@@ -5,7 +5,13 @@ import pandas as pd
 import numpy as np
 import time
 import yaml
+from pages.components.card import Card
+from pages.components.row import Row
 
+card = Card()
+row = Row()
+
+"""
 simulation = html.Div([
     html.Div([
         html.Div([
@@ -33,6 +39,13 @@ simulation = html.Div([
         ], className='card-body'),
     ], className='card col-lg-6'),
 ])
+"""
+
+simulation = row.create(children=[
+    card.create(
+        
+    )
+]),
 
 
 @app.callback(
