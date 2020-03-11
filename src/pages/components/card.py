@@ -11,10 +11,10 @@ class Card(Component):
         title = args['title']
         col_sizes = ' '.join(
             [f'col-{key}-{val}' for key, val in args['col_sizes'].items()])
-        header = html.Div([
-            html.H3(title, className='card-title')
-        ],
-            className='card-header')
+        header_children = [html.H3(title, className='card-title')]
+        if 'card_options' in args:
+            header_children.append(html.Div(args['card_options'], className='card-options'))
+        header = html.Div(header_children, className='card-header')
         children = [header] + args['children']
         if 'footer_id' in args:
             children.append(

@@ -11,20 +11,10 @@ from pages.components.row import Row
 card = Card()
 row = Row()
 
-"""
-simulation = html.Div([
-    html.Div([
-        html.Div([
-            html.H3('Simulation', className='card-title'),
-            html.Div([
-                html.Button('Start', id='start-button',
-                            className='btn btn-primary btn-sm', style={'margin-right': '5px'}),
-                html.Div(),
-                html.Button('Stop', id='cancel-button',
-                            className='btn btn-danger btn-sm')
-            ], className='card-options')
-        ], className='card-header'),
-        html.Div([
+simulation = row.create(children=[
+    card.create(
+        title='Simulation',
+        children=[
             dcc.Dropdown(
                 id='sim-dropdown',
                 options=[
@@ -36,14 +26,15 @@ simulation = html.Div([
             ),
             html.Div(id='simulation-output'),
             html.Div(id='cancel-output')
-        ], className='card-body'),
-    ], className='card col-lg-6'),
-])
-"""
-
-simulation = row.create(children=[
-    card.create(
-
+        ],
+        card_options=[
+            html.Button('Start', id='start-button',
+                            className='btn btn-primary btn-sm', style={'margin-right': '5px'}),
+            html.Div(),
+            html.Button('Stop', id='cancel-button',
+                        className='btn btn-danger btn-sm')
+        ],
+        col_sizes={'md': 6, 'xl': 4}
     )
 ]),
 
