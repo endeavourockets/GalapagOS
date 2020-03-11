@@ -43,7 +43,7 @@ simulation = html.Div([
 
 simulation = row.create(children=[
     card.create(
-        
+
     )
 ]),
 

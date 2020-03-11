@@ -20,24 +20,24 @@ overview = html.Div([
         n_intervals=0
     ),
     row.create(children=[
-            card.create(
-                title='Orientation',
-                children=[orientation.create(id='orientation')],
-                footer_id='orientation_text',
-                col_sizes={'md': 6, 'xl': 4}
-            ),
-            card.create(
-                title='Altitude',
-                children=[
-                    dcc.Graph(
-                        id='altitude-graph',
-                        figure=go.Figure(data=[go.Scatter(x=[0], y=[0])])
-                    )
-                ],
-                footer_id='altitude_text',
-                col_sizes={'md': 12, 'xl': 8}
-            ),
-        ])
+        card.create(
+            title='Orientation',
+            children=[orientation.create(id='orientation')],
+            footer_id='orientation_text',
+            col_sizes={'md': 6, 'xl': 4}
+        ),
+        card.create(
+            title='Altitude',
+            children=[
+                dcc.Graph(
+                    id='altitude-graph',
+                    figure=go.Figure(data=[go.Scatter(x=[0], y=[0])])
+                )
+            ],
+            footer_id='altitude_text',
+            col_sizes={'md': 12, 'xl': 8}
+        ),
+    ])
 ])
 
 
