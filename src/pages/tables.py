@@ -35,6 +35,7 @@ def getSensorTable():
         style_cell={'textAlign': 'center', 'min-width': '50px'},
     )
 
+
 @app.callback(dash.dependencies.Output('display-value', 'children'),
               [dash.dependencies.Input('interval-component', 'n_intervals')])
 def display_value(value):

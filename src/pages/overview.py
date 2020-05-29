@@ -60,6 +60,7 @@ def update_xz_rocket(n_intervals):
     except:
         return orientation.get_style(0)
 
+
 @app.callback(dash.dependencies.Output('orientation_text', 'children'),
               [dash.dependencies.Input('interval-component', 'n_intervals')])
 def update_xz_rocket_text(n_intervals):

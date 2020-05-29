@@ -10,6 +10,7 @@ from pages.sensors import sensors
 server = app.server
 app.layout = empty
 
+
 @app.callback(dash.dependencies.Output('page-content', 'children'),
               [dash.dependencies.Input('url', 'pathname')])
 def display_page(pathname):

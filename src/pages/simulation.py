@@ -73,24 +73,26 @@ def start_simulation(n_clicks, value):
         return ""
     return ""
 
-def start_simulation_two():  
+
+def start_simulation_two():
     while True:
-        filein = open('aruino-database.txt' , 'r')
+        filein = open('aruino-database.txt', 'r')
         lines = filein.readlines()
         filein.close()
-        fileout = open('aruino-database.txt' , 'w')
+        fileout = open('aruino-database.txt', 'w')
         fileout.close()
         data_list = []
         for line in lines:
             token = line.split(',')
             sensor_dict = {}
-            for t in token :
-               sen_d = t.split(':')
-               sensor_dict[sen_d[0]] = sen_d[1].replace('\n','')
+            for t in token:
+                sen_d = t.split(':')
+                sensor_dict[sen_d[0]] = sen_d[1].replace('\n', '')
             data_list.append(sensor_dict)
         add_sensor_reading(data_list)
         time.sleep(1)
     return ""
+
 
 @app.callback(
     dash.dependencies.Output('cancel-output', 'children'),

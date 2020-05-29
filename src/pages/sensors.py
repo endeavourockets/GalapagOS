@@ -40,6 +40,7 @@ def getValueTable():
         style_cell={'textAlign': 'center', 'min-width': '50px'},
     )
 
+
 @app.callback(dash.dependencies.Output('display-sensor', 'children'),
               [dash.dependencies.Input('interval-component', 'n_intervals')])
 def display_value(value):
